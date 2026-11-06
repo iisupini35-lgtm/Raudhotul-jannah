@@ -1,0 +1,458 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #6c477c;
+    --secondary: #b98dbd;
+    --pink: #f5e9f3;
+    --background: #fffaff;
+    --dark: #302438;
+    --text: #817486;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--background);
+    color: var(--dark);
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 9%;
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(80, 50, 90, 0.06);
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--secondary);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.navbar a:hover {
+    color: var(--secondary);
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    color: var(--primary);
+    font-size: 28px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* HERO */
+.hero {
+    min-height: 90vh;
+    padding: 80px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    background: linear-gradient(120deg, #fffaff, #f5e9f3);
+}
+
+.hero-text {
+    max-width: 570px;
+}
+
+.hero-text h4 {
+    color: var(--secondary);
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 58px;
+    line-height: 1.2;
+    color: var(--dark);
+    margin-bottom: 22px;
+}
+
+.hero-text h1 span {
+    color: var(--primary);
+}
+
+.hero-text p {
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 30px;
+    background: var(--primary);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: var(--secondary);
+    transform: translateY(-4px);
+}
+
+/* FOTO PROFIL */
+.profile {
+    width: 310px;
+    height: 390px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 150px 150px 20px 20px;
+    box-shadow: 15px 15px 0 #e8d5e8;
+    background: var(--pink);
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* SECTION */
+section {
+    padding: 90px 10%;
+    scroll-margin-top: 85px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: var(--primary);
+}
+
+.section-title p {
+    color: var(--text);
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* ABOUT */
+#about {
+    background: white;
+}
+
+.about {
+    max-width: 850px;
+    margin: auto;
+    background: var(--background);
+    padding: 40px;
+    border-radius: 15px;
+    border-left: 4px solid var(--secondary);
+}
+
+.about p {
+    color: var(--text);
+    font-size: 15px;
+    line-height: 2;
+}
+
+/* PROJECT */
+.project {
+    background: var(--background);
+}
+
+/* EXPERIENCE */
+.experience {
+    background: white;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #f0e5f0;
+    transition: .4s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(108, 71, 124, .12);
+}
+
+.card h3 {
+    font-size: 19px;
+    color: var(--primary);
+    margin: 15px 0 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.9;
+}
+
+.year {
+    display: inline-block;
+    background: var(--pink);
+    color: var(--primary);
+    padding: 6px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* PROJECT IMAGE */
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: block;
+}
+
+/* SKILLS */
+#skills {
+    background: var(--background);
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill {
+    padding: 35px 15px;
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    border: 1px solid #f0e5f0;
+    transition: .4s;
+}
+
+.skill h3 {
+    color: var(--primary);
+    font-size: 14px;
+}
+
+.skill:hover {
+    background: var(--primary);
+    transform: translateY(-7px);
+}
+
+.skill:hover h3 {
+    color: white;
+}
+
+/* CONTACT */
+.contact {
+    background: #302438;
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.contact p {
+    color: #e0d5e4;
+    margin: 15px;
+    font-size: 14px;
+}
+
+.contact a {
+    color: #d5a9d8;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    background: #211829;
+    color: #bdaec3;
+    text-align: center;
+    padding: 22px;
+    font-size: 13px;
+}
+
+/* ANIMASI SCROLL */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: .8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE TABLET DAN HP */
+@media (max-width: 768px) {
+
+    header {
+        padding: 18px 6%;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: relative;
+        z-index: 1002;
+    }
+
+    .navbar {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        padding: 20px;
+        margin-top: 15px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, .08);
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .hero {
+        min-height: auto;
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 60px 7%;
+        gap: 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .profile {
+        width: 230px;
+        height: 290px;
+    }
+
+    section {
+        padding: 65px 7%;
+        scroll-margin-top: 75px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .about {
+        padding: 25px;
+    }
+}
+
+/* HP KECIL */
+@media (max-width: 400px) {
+
+    .hero-text h1 {
+        font-size: 34px;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .profile {
+        width: 210px;
+        height: 270px;
+    }
+}
+
+/* AKSESIBILITAS */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+    }
+
+    .hidden {
+        opacity: 1;
+        transform: none;
+    }
+}
